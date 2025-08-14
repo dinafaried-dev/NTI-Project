@@ -45,8 +45,14 @@ from sklearn.metrics import classification_report, accuracy_score, confusion_mat
 
 """### ***Read CSV File***"""
 
-data = pd.read_csv(r"/content/credit_card_churn.csv" , usecols=lambda column: column not in ['Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1'
-                                                                                   , 'Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2'])
+import pandas as pd
+
+data = pd.read_csv("data/credit_card_churn.csv",
+                   usecols=lambda column: column not in [
+                       'Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_1',
+                       'Naive_Bayes_Classifier_Attrition_Flag_Card_Category_Contacts_Count_12_mon_Dependent_count_Education_Level_Months_Inactive_12_mon_2'
+                   ])
+
 data.head()
 
 """>### ***Shape of data***"""
