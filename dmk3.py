@@ -132,7 +132,7 @@ def value_counts(data, column):
 for col in cat_columns:
     print(f'The {col} Value counts')
 st.dataframe(value_counts(data, col))
-    print(f'The {col} Value counts by Target(Attrition_Flag)')
+print(f'The {col} Value counts by Target(Attrition_Flag)')
 
 """## ***Feature Engineering***
 
